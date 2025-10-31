@@ -15,6 +15,5 @@ led.plot(0, 2)
 led.plot(0, 3)
 led.plot(0, 4)
 basic.forever(function () {
-    Blinken(1, 1)
-    Blinken(2, 2)
+	
 })
