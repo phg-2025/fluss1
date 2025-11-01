@@ -9,9 +9,7 @@ function zeigeBauer () {
     if (Aktuell == 0) {
         Blinken(Bauer, 0)
     } else {
-        input.onButtonEvent(Button.A, input.buttonEventClick(), function() {
-            
-        })
+    	
     }
 }
 input.onButtonEvent(Button.A, input.buttonEventClick(), function () {
@@ -64,7 +62,7 @@ let Ziege = 0
 let Wolf = 0
 let Kohl = 0
 let Bauer = 0
-Bauer = 4
+Bauer = 0
 Kohl = 0
 Wolf = 0
 Ziege = 0
