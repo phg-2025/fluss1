@@ -58,4 +58,6 @@ let objekte = [0, 5]
 basic.forever(function () {
     zeigeBauer()
     zeigeKohl()
+    zeogeWolf()
+    zeogeZiege()
 })
