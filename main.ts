@@ -73,8 +73,5 @@ led.plot(0, 3)
 led.plot(0, 4)
 let objekte = [0, 5]
 basic.forever(function () {
-    zeigeBauer()
-    zeigeKohl()
-    zeigeWolf()
-    zeigeZiege()
+	
 })
