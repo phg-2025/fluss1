@@ -25,7 +25,14 @@ input.onButtonEvent(Button.A, input.buttonEventClick(), function () {
         Aktuell += 1
     }
     Aktuell = Aktuell % 5
+    Zeigen()
 })
+function Zeigen () {
+    zeigeBauer()
+    zeigeKohl()
+    zeogeWolf()
+    zeogeZiege()
+}
 input.onButtonEvent(Button.B, input.buttonEventClick(), function () {
     if (Aktuell == 0) {
         Bauer += 4 - Bauer
@@ -39,6 +46,7 @@ input.onButtonEvent(Button.B, input.buttonEventClick(), function () {
     if (Aktuell == 4) {
         Ziege += 4 - Ziege
     }
+    Zeigen()
 })
 // Komm
 function Blinken (x: number, y: number) {
@@ -69,8 +77,5 @@ led.plot(0, 2)
 led.plot(0, 3)
 led.plot(0, 4)
 basic.forever(function () {
-    zeigeBauer()
-    zeigeKohl()
-    zeogeWolf()
-    zeogeZiege()
+	
 })
