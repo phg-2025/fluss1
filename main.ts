@@ -5,7 +5,11 @@ function zeigeZiege () {
     Blinken(Ziege, 0)
 }
 function zeigeBauer () {
-    Blinken(Bauer, 0)
+    if (Aktuell == 0) {
+        Blinken(Bauer, 0)
+    } else {
+    	
+    }
 }
 // Komm
 function Blinken (x: number, y: number) {
@@ -17,6 +21,7 @@ function Blinken (x: number, y: number) {
 function zeigeKohl () {
     Blinken(Kohl, 0)
 }
+let Aktuell = 0
 let Ziege = 0
 let Wolf = 0
 let Kohl = 0
@@ -25,14 +30,14 @@ Bauer = 0
 Kohl = 0
 Wolf = 0
 Ziege = 0
-let Aktuell = 0
+Aktuell = 0
 led.plot(0, 0)
 led.plot(0, 2)
 led.plot(0, 3)
 led.plot(0, 4)
 basic.forever(function () {
-	
-})
-basic.forever(function () {
     zeigeBauer()
+    zeigeKohl()
+    zeigeWolf()
+    zeigeZiege()
 })
