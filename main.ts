@@ -1,8 +1,8 @@
 function zeigeWolf () {
-    Blinken(Wolf, 0)
+    Blinken(Wolf, 3)
 }
 function zeigeZiege () {
-    Blinken(Ziege, 0)
+    Blinken(Ziege, 4)
 }
 function zeigeBauer () {
     if (Aktuell == 0) {
@@ -19,14 +19,14 @@ function Blinken (x: number, y: number) {
     basic.pause(500)
 }
 function zeigeKohl () {
-    Blinken(Kohl, 0)
+    Blinken(Kohl, 2)
 }
 let Aktuell = 0
 let Ziege = 0
 let Wolf = 0
 let Kohl = 0
 let Bauer = 0
-Bauer = 0
+Bauer = 4
 Kohl = 0
 Wolf = 0
 Ziege = 0
