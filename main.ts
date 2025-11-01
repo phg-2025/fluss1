@@ -1,50 +1,29 @@
-function zeigeWolf () {
-    Blinken(Wolf, 3)
-}
-function zeigeZiege () {
-    Blinken(Ziege, 4)
-    Kohl += 1
+function zeogeWolf () {
+    if (Aktuell == 2) {
+        Blinken(Wolf, 0)
+    } else {
+        led.plot(0, 2)
+    }
 }
 function zeigeBauer () {
     if (Aktuell == 0) {
         Blinken(Bauer, 0)
     } else {
-    	
+        led.plot(0, 0)
+    }
+}
+function zeogeZiege () {
+    if (Aktuell == 2) {
+        Blinken(Ziege, 0)
+    } else {
+        led.plot(0, 2)
     }
 }
 input.onButtonEvent(Button.A, input.buttonEventClick(), function () {
-    if (Aktuell == 0) {
-        Bauer += 1
-        if (Bauer == 1) {
-            Bauer += 1
-            Bauer = Bauer % 5
-        }
-    } else {
-        if (Aktuell == 2) {
-            Kohl += 1
-            if (Kohl == 1) {
-                Kohl += 1
-                Kohl = Kohl % 5
-            }
-        } else {
-            if (Aktuell == 3) {
-                Wolf += 1
-                if (Wolf == 1) {
-                    Wolf += 1
-                    Wolf = Wolf % 5
-                }
-            } else {
-                if (Aktuell == 4) {
-                    Ziege += 1
-                    if (Ziege == 1) {
-                        Ziege += 1
-                        Ziege = Ziege % 5
-                    }
-                } else {
-                	
-                }
-            }
-        }
+    Aktuell += 1
+    if (Aktuell == 1) {
+        Aktuell += 1
+        Aktuell = Aktuell % 5
     }
 })
 // Komm
@@ -55,7 +34,11 @@ function Blinken (x: number, y: number) {
     basic.pause(500)
 }
 function zeigeKohl () {
-    Blinken(Kohl, 2)
+    if (Aktuell == 2) {
+        Blinken(Kohl, 0)
+    } else {
+        led.plot(0, 2)
+    }
 }
 let Aktuell = 0
 let Ziege = 0
@@ -73,5 +56,6 @@ led.plot(0, 3)
 led.plot(0, 4)
 let objekte = [0, 5]
 basic.forever(function () {
-	
+    zeigeBauer()
+    zeigeKohl()
 })
