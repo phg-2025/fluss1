@@ -23,7 +23,21 @@ input.onButtonEvent(Button.A, input.buttonEventClick(), function () {
     Aktuell += 1
     if (Aktuell == 1) {
         Aktuell += 1
-        Aktuell = Aktuell % 5
+    }
+    Aktuell = Aktuell % 5
+})
+input.onButtonEvent(Button.B, input.buttonEventClick(), function () {
+    if (Aktuell == 0) {
+        Bauer += 4 - Bauer
+    }
+    if (Aktuell == 2) {
+        Kohl += 4 - Kohl
+    }
+    if (Aktuell == 3) {
+        Wolf += 4 - Wolf
+    }
+    if (Aktuell == 4) {
+        Ziege += 4 - Ziege
     }
 })
 // Komm
@@ -54,7 +68,6 @@ led.plot(0, 0)
 led.plot(0, 2)
 led.plot(0, 3)
 led.plot(0, 4)
-let objekte = [0, 5]
 basic.forever(function () {
     zeigeBauer()
     zeigeKohl()
