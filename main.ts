@@ -2,21 +2,21 @@ function zeogeWolf () {
     if (Aktuell == 2) {
         Blinken(Wolf, 0)
     } else {
-        led.plot(0, 2)
+        led.plot(Wolf, 3)
     }
 }
 function zeigeBauer () {
     if (Aktuell == 0) {
         Blinken(Bauer, 0)
     } else {
-        led.plot(0, 0)
+        led.plot(Bauer, 0)
     }
 }
 function zeogeZiege () {
     if (Aktuell == 2) {
         Blinken(Ziege, 0)
     } else {
-        led.plot(0, 2)
+        led.plot(Ziege, 4)
     }
 }
 input.onButtonEvent(Button.A, input.buttonEventClick(), function () {
@@ -37,7 +37,7 @@ function zeigeKohl () {
     if (Aktuell == 2) {
         Blinken(Kohl, 0)
     } else {
-        led.plot(0, 2)
+        led.plot(Kohl, 2)
     }
 }
 let Aktuell = 0
