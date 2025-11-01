@@ -51,9 +51,7 @@ input.onButtonEvent(Button.B, input.buttonEventClick(), function () {
 // Komm
 function Blinken (x: number, y: number) {
     led.plot(x, y)
-    basic.pause(500)
     led.toggle(x, y)
-    basic.pause(500)
 }
 function zeigeKohl () {
     if (Aktuell == 2) {
@@ -72,10 +70,12 @@ Kohl = 0
 Wolf = 0
 Ziege = 0
 Aktuell = 0
+let dauer = 500
+let zeit = input.runningTime()
 led.plot(0, 0)
 led.plot(0, 2)
 led.plot(0, 3)
 led.plot(0, 4)
 basic.forever(function () {
-	
+    Zeigen()
 })
