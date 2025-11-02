@@ -43,6 +43,18 @@ Aktuell = 0
 led.plot(0, 0)
 Bauer = 0
 basic.forever(function () {
-    Blinken(Bauer)
-    Blinken(Kohl)
+    if (Aktuell == 0) {
+        Blinken(Bauer)
+    }
+    if (Aktuell == 2) {
+        Blinken(Kohl)
+    }
+    if (Aktuell == 3) {
+        let Wolf = 0
+        Blinken(Wolf)
+    }
+    if (Aktuell == 4) {
+        let Ziege = 0
+        Blinken(Ziege)
+    }
 })
