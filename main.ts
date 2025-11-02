@@ -1,19 +1,20 @@
 function zeogeWolf () {
-    if (Aktuell == 2) {
+    if (Aktuell == 9) {
         Blinken(Wolf, 0)
     } else {
         led.plot(Wolf, 3)
     }
 }
 function zeigeBauer () {
-    if (Aktuell == 0) {
+    if (Aktuell == 9) {
         Blinken(Bauer, 0)
     } else {
         led.plot(Bauer, 0)
+        led.unplot(4 - Bauer, 0)
     }
 }
 function zeogeZiege () {
-    if (Aktuell == 2) {
+    if (Aktuell == 9) {
         Blinken(Ziege, 0)
     } else {
         led.plot(Ziege, 4)
@@ -36,6 +37,7 @@ function Zeigen () {
 input.onButtonEvent(Button.B, input.buttonEventClick(), function () {
     if (Aktuell == 0) {
         Bauer += 4 - Bauer
+        zeigeBauer()
     }
     if (Aktuell == 2) {
         Kohl += 4 - Kohl
@@ -50,7 +52,7 @@ input.onButtonEvent(Button.B, input.buttonEventClick(), function () {
 })
 // Komm
 function Blinken (x: number, y: number) {
-	
+    led.toggle(x, y)
 }
 function zeigeKohl () {
     if (Aktuell == 2) {
@@ -77,12 +79,5 @@ led.plot(0, 2)
 led.plot(0, 3)
 led.plot(0, 4)
 basic.forever(function () {
-    if (input.runningTime() - zeit == dauer) {
-        an = 1 - an
-        if (an == 1) {
-            led.plot(0, 0)
-        } else {
-            led.unplot(0, 0)
-        }
-    }
+	
 })
