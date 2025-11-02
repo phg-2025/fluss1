@@ -23,5 +23,5 @@
     "supportedTargets": [
         "calliopemini"
     ],
-    "preferredEditor": "pyprj"
+    "preferredEditor": "blocksprj"
 }
