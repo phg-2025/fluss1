@@ -16,7 +16,6 @@ input.onButtonEvent(Button.A, input.buttonEventClick(), function () {
         Aktuell += 1
     }
     Aktuell = Aktuell % 5
-    Zeigen()
 })
 function Zeigen () {
     zeigeBauer()
