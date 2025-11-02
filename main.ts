@@ -18,10 +18,7 @@ input.onButtonEvent(Button.A, input.buttonEventClick(), function () {
     Aktuell = Aktuell % 5
 })
 function Zeigen () {
-    zeigeBauer()
-    zeigeKohl()
-    zeigeWolf()
-    zeigeZiege()
+	
 }
 input.onButtonEvent(Button.B, input.buttonEventClick(), function () {
     if (Aktuell == 0) {
