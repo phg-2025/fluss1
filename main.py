@@ -14,14 +14,10 @@ def on_button_a():
     if Aktuell == 1:
         Aktuell += 1
     Aktuell = Aktuell % 5
-    Zeigen()
 input.on_button_event(Button.A, input.button_event_click(), on_button_a)
 
 def Zeigen():
-    zeigeBauer()
-    zeigeKohl()
-    zeigeWolf()
-    zeigeZiege()
+    pass
 
 def on_button_b():
     global Bauer, Kohl, Wolf, Ziege
