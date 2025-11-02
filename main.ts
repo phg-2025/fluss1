@@ -15,22 +15,27 @@ function Zeigen () {
 }
 input.onButtonEvent(Button.B, input.buttonEventClick(), function () {
     if (Aktuell == 0) {
-        Bauer += 4 - Bauer
+        if (Bauer == 0) {
+            Bauer = 4
+        } else {
+            Bauer = 0
+        }
         zeigeBauer()
     }
     if (Aktuell == 2) {
-        Kohl += 4 - Kohl
+        if (Kohl == 0) {
+            Kohl = 4
+        } else {
+            Kohl = 0
+        }
     }
-    if (Aktuell == 3) {
-        Wolf += 4 - Wolf
-    }
-    if (Aktuell == 4) {
-        Ziege += 4 - Ziege
-    }
-    Zeigen()
 })
-let Ziege = 0
-let Wolf = 0
+function Blinken (Art: number) {
+    led.plot(Art, Aktuell)
+    basic.pause(300)
+    led.unplot(Art, Aktuell)
+    basic.pause(300)
+}
 let Kohl = 0
 let Bauer = 0
 let Aktuell = 0
@@ -38,5 +43,6 @@ Aktuell = 0
 led.plot(0, 0)
 Bauer = 0
 basic.forever(function () {
-	
+    Blinken(Bauer)
+    Blinken(Kohl)
 })
