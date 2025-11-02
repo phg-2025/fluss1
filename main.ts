@@ -58,6 +58,13 @@ input.onButtonEvent(Button.B, input.buttonEventClick(), function () {
         zeigeZiege()
     }
 })
+function Bewege (Objekt: number) {
+    if (Objekt == 0) {
+        objekte = 4
+    } else {
+        Bauer = 0
+    }
+}
 function Blinken (Art: number) {
     led.plot(Art, Aktuell)
     basic.pause(300)
@@ -68,6 +75,7 @@ function zeigeKohl () {
     led.plot(Kohl, 0)
     led.unplot(4 - Kohl, 0)
 }
+let objekte = 0
 let Ziege = 0
 let Wolf = 0
 let Kohl = 0
