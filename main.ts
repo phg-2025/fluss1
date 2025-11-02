@@ -1,3 +1,11 @@
+function zeigeWolf () {
+    led.plot(Wolf, 0)
+    led.unplot(4 - Wolf, 0)
+}
+function zeigeZiege () {
+    led.plot(Ziege, 0)
+    led.unplot(4 - Ziege, 0)
+}
 function zeigeBauer () {
     led.plot(Bauer, 0)
     led.unplot(4 - Bauer, 0)
@@ -12,6 +20,9 @@ input.onButtonEvent(Button.A, input.buttonEventClick(), function () {
 })
 function Zeigen () {
     zeigeBauer()
+    zeigeKohl()
+    zeigeWolf()
+    zeigeZiege()
 }
 input.onButtonEvent(Button.B, input.buttonEventClick(), function () {
     if (Aktuell == 0) {
@@ -36,7 +47,13 @@ function Blinken (Art: number) {
     led.unplot(Art, Aktuell)
     basic.pause(300)
 }
+function zeigeKohl () {
+    led.plot(Kohl, 0)
+    led.unplot(4 - Kohl, 0)
+}
 let Kohl = 0
+let Ziege = 0
+let Wolf = 0
 let Bauer = 0
 let Aktuell = 0
 Aktuell = 0
@@ -50,11 +67,9 @@ basic.forever(function () {
         Blinken(Kohl)
     }
     if (Aktuell == 3) {
-        let Wolf = 0
         Blinken(Wolf)
     }
     if (Aktuell == 4) {
-        let Ziege = 0
         Blinken(Ziege)
     }
 })
