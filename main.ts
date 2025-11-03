@@ -61,7 +61,7 @@ input.onButtonEvent(Button.B, input.buttonEventClick(), function () {
         } else {
             Bauer = 0
         }
-        zeigeZiege()
+        zeigeBauer()
     }
 })
 function Bewege (Objekt: number) {
