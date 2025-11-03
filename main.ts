@@ -11,11 +11,13 @@ function zeigeBauer () {
     led.unplot(4 - Bauer, 0)
 }
 input.onButtonEvent(Button.A, input.buttonEventClick(), function () {
+    led.unplot(2, Aktuell)
     Aktuell += 1
     if (Aktuell == 1) {
         Aktuell += 1
     }
     Aktuell = Aktuell % 5
+    led.plot(2, Aktuell)
 })
 function Zeigen () {
 	
@@ -53,6 +55,14 @@ input.onButtonEvent(Button.B, input.buttonEventClick(), function () {
         }
         zeigeZiege()
     }
+    if (Aktuell != 0) {
+        if (Bauer == 0) {
+            Bauer = 4
+        } else {
+            Bauer = 0
+        }
+        zeigeZiege()
+    }
 })
 function Bewege (Objekt: number) {
     if (Objekt == 0) {
@@ -62,10 +72,7 @@ function Bewege (Objekt: number) {
     }
 }
 function Blinken (Art: number) {
-    led.plot(Art, Aktuell)
-    basic.pause(300)
-    led.unplot(Art, Aktuell)
-    basic.pause(300)
+	
 }
 function zeigeKohl () {
     led.plot(Kohl, 0)
