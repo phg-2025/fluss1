@@ -79,9 +79,9 @@ let Bauer = 0
 let Aktuell = 0
 Aktuell = 0
 led.plot(0, 0)
-led.plot(2, 0)
-led.plot(3, 0)
-led.plot(4, 0)
+led.plot(0, 2)
+led.plot(0, 3)
+led.plot(0, 4)
 Bauer = 0
 Kohl = 0
 Wolf = 0
