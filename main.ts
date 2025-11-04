@@ -31,6 +31,7 @@ function Debug () {
     oledssd1306.writeNumber(Aktuell)
     oledssd1306.setTextXY(1, 0)
     oledssd1306.writeString("Bauer")
+    oledssd1306.setTextXY(0, 9)
     oledssd1306.writeNumber(Bauer)
     oledssd1306.setTextXY(2, 0)
     oledssd1306.writeString("Kohl")
