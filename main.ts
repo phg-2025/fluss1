@@ -41,6 +41,10 @@ function Debug () {
     oledssd1306.writeString("Wolf")
     oledssd1306.setTextXY(3, 9)
     oledssd1306.writeNumber(Wolf)
+    oledssd1306.setTextXY(4, 0)
+    oledssd1306.writeString("Ziege")
+    oledssd1306.setTextXY(4, 9)
+    oledssd1306.writeNumber(Ziege)
 }
 input.onButtonEvent(Button.B, input.buttonEventClick(), function () {
     if (Aktuell == 0) {
