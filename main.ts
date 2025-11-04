@@ -18,9 +18,10 @@ input.onButtonEvent(Button.A, input.buttonEventClick(), function () {
     }
     Aktuell = Aktuell % 5
     led.plot(2, Aktuell)
+    oledssd1306.clearDisplay()
     oledssd1306.setTextXY(0, 0)
     oledssd1306.writeString("Aktuell")
-    oledssd1306.setTextXY(1, 0)
+    oledssd1306.setTextXY(0, 9)
     oledssd1306.writeNumber(Aktuell)
 })
 function Zeigen () {
