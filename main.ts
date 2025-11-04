@@ -18,14 +18,28 @@ input.onButtonEvent(Button.A, input.buttonEventClick(), function () {
     }
     Aktuell = Aktuell % 5
     led.plot(2, Aktuell)
+    Debug()
+})
+function Zeigen () {
+	
+}
+function Debug () {
     oledssd1306.clearDisplay()
     oledssd1306.setTextXY(0, 0)
     oledssd1306.writeString("Aktuell")
     oledssd1306.setTextXY(0, 9)
     oledssd1306.writeNumber(Aktuell)
-})
-function Zeigen () {
-	
+    oledssd1306.setTextXY(1, 0)
+    oledssd1306.writeString("Bauer")
+    oledssd1306.writeNumber(Bauer)
+    oledssd1306.setTextXY(2, 0)
+    oledssd1306.writeString("Kohl")
+    oledssd1306.setTextXY(2, 9)
+    oledssd1306.writeNumber(Kohl)
+    oledssd1306.setTextXY(3, 0)
+    oledssd1306.writeString("Wolf")
+    oledssd1306.setTextXY(3, 9)
+    oledssd1306.writeNumber(Wolf)
 }
 input.onButtonEvent(Button.B, input.buttonEventClick(), function () {
     if (Aktuell == 0) {
@@ -68,14 +82,8 @@ input.onButtonEvent(Button.B, input.buttonEventClick(), function () {
         }
         zeigeBauer()
     }
+    Debug()
 })
-function Bewege (Objekt: number) {
-    if (Objekt == 0) {
-        objekte = 4
-    } else {
-        Bauer = 0
-    }
-}
 function Blinken (Art: number) {
 	
 }
@@ -83,7 +91,6 @@ function zeigeKohl () {
     led.plot(Kohl, 0)
     led.unplot(4 - Kohl, 0)
 }
-let objekte = 0
 let Ziege = 0
 let Wolf = 0
 let Kohl = 0
