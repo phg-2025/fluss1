@@ -101,6 +101,7 @@ let Wolf = 0
 let Kohl = 0
 let Bauer = 0
 let Aktuell = 0
+oledssd1306.initDisplay()
 Aktuell = 0
 led.plot(0, 0)
 led.plot(0, 2)
